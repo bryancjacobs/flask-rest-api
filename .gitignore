@@ -1,0 +1,5 @@
+build/
+dist/
+.idea/
+kafroxy.egg-info/
+*.iml
