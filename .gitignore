@@ -3,3 +3,4 @@ dist/
 .idea/
 kafroxy.egg-info/
 *.iml
+__pycache__/

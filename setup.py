@@ -12,5 +12,5 @@ setup(
     url='https://github.com/phil-willett/python-redis-log',
     packages=['kafroxy'],
     license='MIT',
-    install_requires=['kafka-python', 'gunicorn', 'flask', 'kafka', 'config']
+    install_requires=['kafka-python', 'gunicorn', 'flask', 'kafka', 'config','flask-cors']
 )

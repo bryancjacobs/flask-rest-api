@@ -2,11 +2,13 @@ from flask import Flask
 from flask import json
 from flask import request
 from kafka import KafkaProducer
+from flask_cors import CORS
+
 
 import config
 
 app = Flask(__name__)
-
+CORS(app)
 
 producer = KafkaProducer(bootstrap_servers=config.brokers)
 
@@ -19,9 +21,9 @@ def ping():
 @app.route('/', methods=['POST'])
 def create():
 
-    print(request.json)
+    print(request.get_json())
 
-    json_message = json.dumps(request.json)
+    json_message = json.dumps(request.get_json())
 
     producer.send('test-message', str.encode(json_message))
 
