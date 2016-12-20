@@ -9,7 +9,7 @@ setup(
     description='rest api over kafka producer poc',
     long_description='rest api over kafka producer poc',
     author='Bryan Jacobs',
-    url='https://github.com/phil-willett/python-redis-log',
+    url='https://github.com/bryancjacobs/flask-rest-api.git',
     packages=['kafroxy'],
     license='MIT',
     install_requires=['kafka-python', 'gunicorn', 'flask', 'kafka', 'config','flask-cors']
