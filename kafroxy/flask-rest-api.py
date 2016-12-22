@@ -21,11 +21,19 @@ def ping():
 @app.route('/', methods=['POST'])
 def create():
 
-    print(request.get_json())
+    json_dict = request.get_json()
 
-    json_message = json.dumps(request.get_json())
+    print('respondentUniqueKey: ' + json_dict['respondentUniqueKey'])
 
-    producer.send('test-message', str.encode(json_message))
+    json_message = json.dumps(json_dict)
+
+    print(json_message)
+
+    key = json_dict['respondentUniqueKey'].encode('utf8')
+
+    value = str.encode(json_message)
+
+    producer.send(config.topic, key=key, value=value)
 
     return json_message
 
