@@ -12,5 +12,5 @@ setup(
     url='https://github.com/bryancjacobs/flask-rest-api.git',
     packages=['kafroxy'],
     license='MIT',
-    install_requires=['kafka-python', 'gunicorn', 'flask', 'kafka', 'config','flask-cors']
+    install_requires=['kafka-python', 'gunicorn', 'flask', 'kafka', 'config', 'flask-cors', 'survey']
 )
