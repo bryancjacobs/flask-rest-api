@@ -3,7 +3,7 @@ from flask import json
 from flask import request
 from kafka import KafkaProducer
 from flask_cors import CORS
-from survey import Survey
+from Survey import Survey
 import csv
 import config
 
