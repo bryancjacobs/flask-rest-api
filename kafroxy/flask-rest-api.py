@@ -41,7 +41,7 @@ def create():
 @app.route('/survey', methods=['GET'])
 def survey():
 
-    with open(config.csv, 'rt', encoding='utf-8') as csvFile:
+    with open(config.csv, 'rt') as csvFile:
 
         reader = csv.reader(csvFile, delimiter=',')
 
